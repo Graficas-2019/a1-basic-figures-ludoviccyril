@@ -250,7 +250,7 @@ function createSphere(gl, radius) {
   gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
   var verts = [0.0, 0.0, 0.0];
   for (let i = Math.PI / 4; i < (7 * Math.PI) / 4; i += 0.01) {
-    verts.push(0.5 * Math.cos(i), 0.5 * Math.sin(i), 0.0);
+    verts.push(radius * Math.cos(i), radius * Math.sin(i), 0.0);
   }
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(verts), gl.STATIC_DRAW);
   var sphere = {
